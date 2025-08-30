@@ -1,37 +1,41 @@
 {
   "expo": {
-    "name": "my-expo-app",
+    "name": "Weather",
     "slug": "my-expo-app",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
     "plugins": [],
-
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/logo.png",
+          "backgroundColor": "#FFFFFF"
+
+      },
+      "package": "com.biohazardcoder.myexpoapp"
+    },
+    "owner": "biohazardcoder",
+    "extra": {
+      "eas": {
+        "projectId": "9c8c4145-5cad-46c4-bf06-4175fd9e5598"
       }
     }
   }
