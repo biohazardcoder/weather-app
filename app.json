@@ -22,13 +22,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.biohazardcoder.myexpoapp",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
-          "backgroundColor": "#FFFFFF"
-
+        "backgroundColor": "#FFFFFF"
       },
       "package": "com.biohazardcoder.myexpoapp"
     },

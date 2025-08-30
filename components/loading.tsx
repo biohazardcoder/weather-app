@@ -1,12 +1,12 @@
-import React from 'react'
-import { Text, View,StyleSheet } from 'react-native'
+import { Text, View,StyleSheet, } from 'react-native'
 import AnimatedLoader from "react-native-animated-loader";
 
 export const Loading = () => {
 
   return (
-    <View className='flex-1 flex items-center justify-center'>
-         <AnimatedLoader
+    <View className='flex-1 flex items-center justify-center '>
+       <View className='flex-1'>
+          <AnimatedLoader
         visible={true}
         overlayColor="rgba(255,255,255,0.75)"
         source={require("../assets/loading.json")}
@@ -14,7 +14,11 @@ export const Loading = () => {
         speed={1}
       >
       </AnimatedLoader>
-      <Text className='mt-20 font-semibold text-2xl animate-pulse duration-200'>Loading...</Text>
+       </View>
+       <View className='flex-1  w-full flex items-center justify-end pb-20'>
+      <Text className='font-semibold text-sm'>It will be take a few moments, please wait!</Text>
+       </View>
+
     </View>
   )
 }
