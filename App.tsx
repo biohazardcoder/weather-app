@@ -8,6 +8,7 @@ import { Alert } from 'react-native';
 import * as Location from "expo-location" 
 import axios from 'axios';
 import NetInfo from '@react-native-community/netinfo';
+import { updateCheck } from 'components/update';
 
 type WeatherType = "Thunderstorm" | "Drizzle" | "Rain" | "Snow" | "Clear" | "Clouds"
 
@@ -24,6 +25,7 @@ export default function App() {
   const API_KEY = "af0b71bd8b74105dbb7cda9499d327da"
   
   useEffect(() => {
+    updateCheck()
     const unsubscribe = NetInfo.addEventListener(state => {
       setIsConnected(state.isConnected ?? false)
     })
@@ -52,6 +54,12 @@ export default function App() {
       setWeather(response)
       setLoading(false)
     } catch (error) {
+       setLoading(true)
+      const response = (await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=toshkent&appid=${API_KEY}&units=metric`
+      )).data
+      setWeather(response)
+      setLoading(false)
       Alert.alert("Error in search weather")
     }
   }

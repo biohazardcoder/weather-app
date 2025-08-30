@@ -36,10 +36,19 @@
       "package": "com.biohazardcoder.myexpoapp"
     },
     "owner": "biohazardcoder",
+    "updates": {
+      "url": "https://u.expo.dev/9c8c4145-5cad-46c4-bf06-4175fd9e5598",
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
     "extra": {
       "eas": {
         "projectId": "9c8c4145-5cad-46c4-bf06-4175fd9e5598"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
